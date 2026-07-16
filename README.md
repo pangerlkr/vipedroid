@@ -4,16 +4,33 @@
 
 Vibe-Droid is a lightweight, absolute-zero-lag Electron preview canvas designed for modern React Native and web app development. It eliminates the "Emulator Tax"—the massive CPU drain of running a virtual Android OS—giving you instant UI hot-reloading wrapped in a beautiful, draggable Pixel 7 Pro frame.
 
-But Vibe-Droid is more than just a preview window. It is purpose-built to be the perfect companion for **Antigravity** (Google DeepMind's agentic AI assistant).
+Built for compatibility with **agentic coding assistants**, Vibe-Droid acts as the perfect physical bridge for AI agents (like Antigravity) and manual coders alike.
 
 ---
 
-## 🌟 Core Features
+## 👨‍💻 How Manual Coders Use It (In Detail)
 
-- **Absolute Zero Lag:** No heavy Android OS running in the background. Your app boots instantly and UI changes hot-reload in milliseconds.
-- **The "Vibe" UI:** A hyper-realistic, borderless, frameless floating screen that sits cleanly on your desktop.
-- **Live URL Connect:** A built-in splash screen lets you instantly connect to any local bundler port (like Vite or Expo) without restarting the canvas.
-- **AI Vision Bridge 👁️:** Vibe-Droid silently captures its screen every 3 seconds and saves it to `live_feed.png` in the root folder. This allows AI agents (like Antigravity) to *natively see* your UI layout as they code, enabling autonomous visual debugging!
+For human developers, Vibe-Droid is a massive quality-of-life upgrade over traditional Android Studio Emulators or Expo Go:
+
+1. **Start Your Bundler**: Spin up your local frontend (e.g. `npm run dev` for Vite, or Metro for React Native).
+2. **Launch Vibe-Droid**: Run `npm start` in the Vibe-Droid folder. It instantly boots a beautiful, borderless Pixel frame on your desktop.
+3. **Connect**: Enter your bundler URL (e.g., `http://localhost:5173`).
+4. **Code with Zero Lag**: Because it relies on the Electron Chromium engine instead of a virtualized Android OS, your UI updates hot-reload in milliseconds without draining your laptop's battery or maxing out your RAM.
+5. **Drag & Pin**: You can click and drag the phone frame anywhere on your screen. Keep it hovering next to your VS Code while you build your layouts!
+
+---
+
+## 🤖 How AI Agents (Antigravity) Use It
+
+Vibe-Droid was built to unlock the true power of **Antigravity** and other agentic coding assistants. 
+
+Because of the **AI Vision Bridge 👁️**—which silently captures the screen every 3 seconds to `live_feed.png`—your AI can natively *see* the UI it is building. 
+
+**Want to let your AI take over? Just copy and paste this prompt to your agent:**
+
+> *"I have booted Vibe-Droid and the screen is connected to my live codebase. You can see the UI output by reading the `live_feed.png` image in the Vibe-Droid root folder. You have full permission to start coding my app. Watch the live feed to visually verify your CSS, padding, and layout changes as you go!"*
+
+When paired with MCPs (like Supabase and GitHub), your AI agent can spin up a live database, build the frontend, visually debug the CSS using the live feed, and commit a production-ready MVP completely autonomously.
 
 ---
 
@@ -23,25 +40,10 @@ But Vibe-Droid is more than just a preview window. It is purpose-built to be the
 
 Vibe-Droid embraces the **React Native Platform-Specific Extension** philosophy. You never have to write messy `if (isWeb)` code. Instead, you create two separate files for your hardware logic:
 
-1. **Native (`BluetoothAdapter.js`)**: Uses native libraries like `react-native-ble-plx` for the real phone.
+1. **Native (`BluetoothAdapter.js`)**: Uses native libraries for the real phone.
 2. **Web (`BluetoothAdapter.web.js`)**: Uses `navigator.bluetooth` to hook directly into your PC's physical Bluetooth hardware for Vibe-Droid.
 
-When you run your app in Vibe-Droid, the bundler **automatically** serves the `.web.js` file, connecting directly to your laptop's Webcam (`navigator.mediaDevices`), GPS, and Bluetooth. When you finally compile the `.apk` for Android, it ignores the web file entirely.
-
-This allows you to test native hardware integrations instantly using your PC's hardware, with zero emulator lag!
-
----
-
-## 🤖 The Antigravity Synergy
-
-Vibe-Droid was built to unlock the true power of **Antigravity**. 
-
-When you pair Vibe-Droid with Antigravity, you unlock a completely autonomous MVP factory:
-1. **Visual Awareness:** Because of the `live_feed.png` bridge, Antigravity can physically see the UI it is building. If a header is overlapping a notch, Antigravity can see it and fix the CSS padding itself.
-2. **MCP Superpowers:** Connect the **Supabase MCP** and **GitHub MCP** to Antigravity.
-3. **Instant MVPs:** You can tell Antigravity, *"Build a social feed app."* Antigravity will autonomously generate the UI, hot-reload it into Vibe-Droid, visually verify the layout, use the Supabase MCP to instantly spin up a live Postgres database and API, connect the frontend, and push the final MVP-ready codebase to GitHub.
-
-You just sit back and watch the code come to life on the canvas.
+When you run your app in Vibe-Droid, the bundler automatically serves the `.web.js` file, connecting directly to your laptop's Webcam, GPS, and Bluetooth with zero emulator configuration!
 
 ---
 
@@ -58,7 +60,3 @@ npm install
 # Start Vibe-Droid
 npm start
 ```
-
-1. Vibe-Droid will boot instantly to the "Ready for Code" screen.
-2. Type in your dev server URL (e.g., `http://localhost:5173` for Vite, or `8081` for Metro).
-3. Hit **Connect** and experience absolute zero-lag UI coding!
