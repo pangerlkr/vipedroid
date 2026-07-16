@@ -26,9 +26,9 @@ Vibe-Droid was built to unlock the true power of **Antigravity** and other agent
 
 Because of the **AI Vision Bridge 👁️**—which silently captures the screen every 3 seconds to `live_feed.png`—your AI can natively *see* the UI it is building. 
 
-**Want to let your AI take over? Just copy and paste this prompt to your agent:**
+**Want to let your AI take over completely? Just copy and paste this prompt to your agent:**
 
-> *"I have booted Vibe-Droid and the screen is connected to my live codebase. You can see the UI output by reading the `live_feed.png` image in the Vibe-Droid root folder. You have full permission to start coding my app. Watch the live feed to visually verify your CSS, padding, and layout changes as you go!"*
+> *"I want you to visually build an app for me. First, clone `https://github.com/leethongs/vipedroid.git` into a new folder and run `npm install` and `npm start` to boot the Vibe-Droid canvas. Then, spin up a new React app in a separate folder next to it. Connect the app to Vibe-Droid. As you write the code, use the `live_feed.png` file in the Vibe-Droid folder to visually verify your UI layouts, CSS, and padding autonomously!"*
 
 When paired with MCPs (like Supabase and GitHub), your AI agent can spin up a live database, build the frontend, visually debug the CSS using the live feed, and commit a production-ready MVP completely autonomously.
 
