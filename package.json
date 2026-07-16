@@ -2,9 +2,8 @@
   "name": "vibe-droid",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,12 +12,5 @@
   "description": "",
   "devDependencies": {
     "electron": "^43.1.1"
-  },
-  "dependencies": {
-    "@inquirer/prompts": "^8.5.2",
-    "adm-zip": "^0.6.0",
-    "axios": "^1.18.1",
-    "chalk": "^5.6.2",
-    "tcp-port-used": "^1.0.3"
   }
 }
