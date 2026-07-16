@@ -1,63 +1,64 @@
-# Vibe-Droid: The Lightning Web Canvas ⚡📱
+# Vibe-Droid ⚡📱
 
-A zero-friction, absolute-zero-lag Electron preview canvas for modern mobile development. Built for "vibe coders" and AI coding agents.
+> **The Ultimate Zero-Lag Web Canvas for Vibe Coders & AI Agents**
 
-Vibe-Droid uses a lightweight Web Canvas to instantly render your React Native Web or Web App projects inside a hyper-realistic Pixel 7 Pro frame. 
+Vibe-Droid is a lightweight, absolute-zero-lag Electron preview canvas designed for modern React Native and web app development. It eliminates the "Emulator Tax"—the massive CPU drain of running a virtual Android OS—giving you instant UI hot-reloading wrapped in a beautiful, draggable Pixel 7 Pro frame.
 
-By completely removing the heavy Android Emulator, Vibe-Droid gives you **zero CPU lag** and instant hot-reloading.
-
-## Features ✨
-
-- **Absolute Zero Lag:** Boots in under 2 seconds. No heavy Android OS dragging down your CPU.
-- **The "Vibe" UI:** A beautiful, draggable, borderless Pixel 7 Pro frame on your desktop.
-- **Live URL Connect:** A built-in splash screen that lets you instantly connect to any local bundler port without restarting.
-- **AI Vision Bridge 👁️:** Continuously saves the live screen buffer to `live_feed.png` in the project root via native Electron capture. Your AI coding assistants can natively "see" your app in real-time, enabling autonomous UI debugging!
+But Vibe-Droid is more than just a preview window. It is purpose-built to be the perfect companion for **Antigravity** (Google DeepMind's agentic AI assistant).
 
 ---
 
-## 🛑 The "Emulator Tax" (Why no Android OS?)
+## 🌟 Core Features
 
-You might be wondering: *"Why doesn't this run a real Android Emulator so I can test native APKs?"*
-
-**The harsh reality of mobile development:** You cannot run a full virtual Android Operating System on a mid-range PC without severe CPU lag. If your tools lag, your workflow breaks. 
-
-We built Vibe-Droid for **speed**. We chose instant UI rendering over sluggish native `.apk` support.
-
-## 🔌 The Hardware Bridge Philosophy (Bluetooth, Camera, GPS)
-
-*"If there is no Android OS, how do I test native hardware like Bluetooth?"*
-
-React Native supports **Platform-Specific Extensions**. You do not need to write messy `if (isWeb)` code. Instead, you create two files:
-
-1. `BluetoothAdapter.js` *(Uses native `react-native-ble-plx` for the real phone)*
-2. `BluetoothAdapter.web.js` *(Uses `navigator.bluetooth` for the Vibe-Droid canvas)*
-
-When you test your app in Vibe-Droid, the bundler **automatically** uses the `.web.js` file, which hooks directly into your laptop's physical Bluetooth radio via the Web Bluetooth API! When you compile the app for the Play Store, it automatically ignores the web file and uses the native Android file.
-
-**This applies to all hardware:**
-- **Camera?** Write a `.web.js` file using `navigator.mediaDevices` (uses your laptop webcam).
-- **GPS?** Write a `.web.js` file using `navigator.geolocation` (uses your IP location).
-
-This philosophy allows you to build and test your entire app instantly in Vibe-Droid using your PC's hardware, and only touch a physical phone for final testing!
+- **Absolute Zero Lag:** No heavy Android OS running in the background. Your app boots instantly and UI changes hot-reload in milliseconds.
+- **The "Vibe" UI:** A hyper-realistic, borderless, frameless floating screen that sits cleanly on your desktop.
+- **Live URL Connect:** A built-in splash screen lets you instantly connect to any local bundler port (like Vite or Expo) without restarting the canvas.
+- **AI Vision Bridge 👁️:** Vibe-Droid silently captures its screen every 3 seconds and saves it to `live_feed.png` in the root folder. This allows AI agents (like Antigravity) to *natively see* your UI layout as they code, enabling autonomous visual debugging!
 
 ---
 
-## Installation 🛠️
+## 🔌 The Hardware Bridge (Camera, Bluetooth, GPS)
+
+*"If there is no Android OS, how do I test native hardware?"*
+
+Vibe-Droid embraces the **React Native Platform-Specific Extension** philosophy. You never have to write messy `if (isWeb)` code. Instead, you create two separate files for your hardware logic:
+
+1. **Native (`BluetoothAdapter.js`)**: Uses native libraries like `react-native-ble-plx` for the real phone.
+2. **Web (`BluetoothAdapter.web.js`)**: Uses `navigator.bluetooth` to hook directly into your PC's physical Bluetooth hardware for Vibe-Droid.
+
+When you run your app in Vibe-Droid, the bundler **automatically** serves the `.web.js` file, connecting directly to your laptop's Webcam (`navigator.mediaDevices`), GPS, and Bluetooth. When you finally compile the `.apk` for Android, it ignores the web file entirely.
+
+This allows you to test native hardware integrations instantly using your PC's hardware, with zero emulator lag!
+
+---
+
+## 🤖 The Antigravity Synergy
+
+Vibe-Droid was built to unlock the true power of **Antigravity**. 
+
+When you pair Vibe-Droid with Antigravity, you unlock a completely autonomous MVP factory:
+1. **Visual Awareness:** Because of the `live_feed.png` bridge, Antigravity can physically see the UI it is building. If a header is overlapping a notch, Antigravity can see it and fix the CSS padding itself.
+2. **MCP Superpowers:** Connect the **Supabase MCP** and **GitHub MCP** to Antigravity.
+3. **Instant MVPs:** You can tell Antigravity, *"Build a social feed app."* Antigravity will autonomously generate the UI, hot-reload it into Vibe-Droid, visually verify the layout, use the Supabase MCP to instantly spin up a live Postgres database and API, connect the frontend, and push the final MVP-ready codebase to GitHub.
+
+You just sit back and watch the code come to life on the canvas.
+
+---
+
+## 🛠️ Installation & Usage
 
 ```bash
-git clone https://github.com/your-username/vibe-droid.git
+# Clone the repository
+git clone https://github.com/leethongs/vipedroid.git
 cd vibe-droid
+
+# Install dependencies
 npm install
-```
 
-## Usage 🚀
-
-Start the preview canvas:
-
-```bash
+# Start Vibe-Droid
 npm start
 ```
 
-1. Vibe-Droid will instantly open the "Ready for Code" screen.
-2. Type in your dev server URL (e.g., `http://localhost:8081` for React Native Web).
-3. Hit Connect and experience absolute zero-lag UI coding!
+1. Vibe-Droid will boot instantly to the "Ready for Code" screen.
+2. Type in your dev server URL (e.g., `http://localhost:5173` for Vite, or `8081` for Metro).
+3. Hit **Connect** and experience absolute zero-lag UI coding!
