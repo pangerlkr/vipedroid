@@ -1,0 +1,5 @@
+node_modules/
+vendor/
+live_feed.png
+live_feed_temp.png
+.DS_Store
